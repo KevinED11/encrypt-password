@@ -1,5 +1,6 @@
 from passlib.hash import bcrypt
 
+
 class Password:
     @staticmethod
     def encrypt(password: str) -> str:
@@ -9,7 +10,7 @@ class Password:
     def verify(password: str, hash: str) -> bool:
         return bcrypt.verify(password, hash)
 
-   
+
 if __name__ == "__main__":
     password = Password.encrypt("Kevin dueñas")
     print(password)
